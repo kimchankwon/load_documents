@@ -18,5 +18,5 @@ deactivate
 
 0. Add file .env
 1. Add the file into a folder and point the loader.py to it
-2. Run `python3 loader.py path/to/file`
+2. Run `python3 loader.py "path/to/file"`
 3. e.g. `python3 loader.py "COMP9517/Course Outline.pdf"`

@@ -2,8 +2,10 @@
 import sys
 argumentList = sys.argv[1:]
 if len(argumentList) != 1:
-  print("Usage: python3 loader.py path/to/file")
+  print('Usage: python3 loader.py "path/to/file"')
   exit()
+
+path_name = sys.argv[1]
 
 import os
 from dotenv import load_dotenv
@@ -23,7 +25,7 @@ embeddings = OpenAIEmbeddings()
 from langchain_community.document_loaders import PyPDFLoader
 
 
-loader = PyPDFLoader("COMP9517/Course Outline.pdf")
+loader = PyPDFLoader(path_name)
 documents = loader.load()
 
 vector_store = SupabaseVectorStore.from_documents(
